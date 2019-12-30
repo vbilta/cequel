@@ -486,6 +486,9 @@ module Cequel
       def internal_names
         ['org.apache.cassandra.db.marshal.PointType']
       end
+      def cast(value)
+        value
+      end
     end
     register Point.instance
 
