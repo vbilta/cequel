@@ -481,5 +481,13 @@ module Cequel
       end
     end
     register Varint.instance
+
+    class Point < Base
+      def internal_names
+        ['org.apache.cassandra.db.marshal.PointType']
+      end
+    end
+    register Point.instance
+
   end
 end
